@@ -3,25 +3,14 @@
 
 #include "functions.h"
 
-typedef struct Neuron{
-    double input;
-    double weight;
-    double output;
-    struct Neuron * nextNeuron;
-}Neuron;
+int main()
+{  
+    int numFeatures = 784; // Número de recursos na camada de entrada
 
-typedef struct Layer {
-    int numNeurons; 
-    Neuron *neurons; 
-} Layer;
+    NeuralNetwork *network = createNeuralNetwork(numFeatures);
 
-typedef struct NeuralNetwork {
-    int numLayers; 
-    Layer *layers;
-} NeuralNetwork;
+    freeNeuralNetwork(network);
 
-int main(){
+    return 0;
 
-standardDeviation();
-    
 }
